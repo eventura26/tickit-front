@@ -10,7 +10,7 @@ export default function Venues(){
     const [venues, setVenues] = useState([])
     useEffect(()=>{
         const getAllVenues = async () => {
-            const res = await axios.get('http://https://tick-it.onrender.com/venues/?format=json');
+            const res = await axios.get('https://tick-it.onrender.com/venues/?format=json');
             setVenues(res.data)
         };
         getAllVenues();
