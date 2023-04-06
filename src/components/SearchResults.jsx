@@ -21,7 +21,7 @@ export default function SearchResults(){
 
     useEffect(()=>{
         const getResults = async() => {
-            const response = await axios.get(`http://localhost:8000/${category}/`)
+            const response = await axios.get(`https://tick-it.onrender.com/${category}/`)
             setList(response.data); 
         }
         getResults();

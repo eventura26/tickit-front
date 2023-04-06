@@ -13,7 +13,7 @@ export default function Events(){
     const [events, setEvents] = useState([])
     useEffect(()=>{
         const getAllEvents = async () => {
-            const res = await axios.get('http://localhost:8000/events/?format=json');
+            const res = await axios.get('https://tick-it.onrender.com/events/?format=json');
             setEvents(res.data)
         };
         getAllEvents();

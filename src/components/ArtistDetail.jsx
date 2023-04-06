@@ -20,7 +20,7 @@ export default function ArtistDetail(){
 
         useEffect(()=>{
             const getArtist = async () => {
-                const res = await axios.get(`http://localhost:8000/artists/${id}?format=json`);
+                const res = await axios.get(`https://tick-it.onrender.com/artists/${id}?format=json`);
                 setArtist(res.data)
                 console.log(res.data)
             };
@@ -29,7 +29,7 @@ export default function ArtistDetail(){
     
         useEffect(()=>{
             const getEvents = async () => {
-                const res = await axios.get(`http://localhost:8000/events/`);
+                const res = await axios.get(`https://tick-it.onrender.com/events/`);
                 const filteredEvents = res.data.filter(event => {
                     return event.performing_at.some(performer => performer.id === parseInt(id))
                 })

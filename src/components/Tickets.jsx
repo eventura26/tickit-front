@@ -19,7 +19,7 @@ export default function Tickets(){
       });
     useEffect(()=>{
         const getEvent = async () => {
-            const res = await axios.get(`http://localhost:8000/events/${id}?format=json`);
+            const res = await axios.get(`http://https://tick-it.onrender.com/events/${id}?format=json`);
             setEvent(res.data)
             console.log(res)
         }
@@ -40,7 +40,7 @@ export default function Tickets(){
                 address:formValues.address
                 };
                 console.log(tick)
-            await axios.post('http://localhost:8000/ticket/', tick);
+            await axios.post('https://tick-it.onrender.com/ticket/', tick);
             setFormValues({
                 name: "",
                 quantity:"",

@@ -11,7 +11,7 @@ export default function Artists(){
     const [artists, setArtists] = useState([])
     useEffect(()=>{
         const getAllArtists = async () => {
-            const res = await axios.get('http://localhost:8000/artists/?format=json');
+            const res = await axios.get('https://tick-it.onrender.com/artists/?format=json');
             setArtists(res.data)
         };
         getAllArtists();

@@ -18,7 +18,7 @@ export default function ArtistDetail(){
 
     useEffect(()=>{
         const getArtist = async () => {
-            const res = await axios.get(`http://localhost:8000/venues/${id}?format=json`);
+            const res = await axios.get(`https://tick-it.onrender.com/venues/${id}?format=json`);
             setVenue(res.data)
             console.log(res.data)
         };
@@ -27,7 +27,7 @@ export default function ArtistDetail(){
 
     useEffect(() => {
         const getEvents = async () => {
-          const res = await axios.get(`http://localhost:8000/events/`);
+          const res = await axios.get(`https://tick-it.onrender.com/events/`);
           const filteredEvents = res.data.filter(event => {
             return event.venue.includes(`venues/${id}`);
           });
